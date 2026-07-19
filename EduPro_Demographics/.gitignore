@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+outputs/logs/*.log
+
+# Environment
+.env
+.env.local
+
+# Jupyter
+.ipynb_checkpoints/
+
+# UV
+# uv.lock is committed for reproducibility
+
+# Outputs (keep structure, ignore generated files)
+outputs/charts/*.png
+outputs/charts/*.html
+outputs/reports/*.txt
+outputs/reports/*.pdf
+outputs/cleaned_data/*.xlsx
+outputs/cleaned_data/*.csv
