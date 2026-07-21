@@ -153,12 +153,12 @@ Ensure `users.xlsx` is in the `data/` directory with columns:
 
 ## ⚡ Quick Start
 
-```bash
-# Run the dashboard
-uv run streamlit run streamlit_app/app.py
+```powershell
+# Windows PowerShell
+.\.venv\Scripts\python.exe -m streamlit run streamlit_app/app.py
 ```
 
-The dashboard will open at **http://localhost:8501** 🎉
+If `uv` is blocked by Windows Application Control policy, use the command above to start the dashboard directly from the project virtual environment. Once Streamlit starts successfully, the dashboard will open in your browser at **http://localhost:8501**. If it does not open automatically, visit the URL manually. 🎉
 
 ## 🐳 Running with Docker
 
