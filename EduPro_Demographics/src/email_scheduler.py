@@ -7,19 +7,27 @@ Supports demo mode (saves to disk) and live SMTP mode.
 
 import smtplib
 import io
+import sys
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 from datetime import datetime
+from pathlib import Path
 from typing import Optional
 
 from loguru import logger
+
+# ── Ensure project root is on sys.path ──
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.config import (
     SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASSWORD,
     EMAIL_FROM, EMAIL_DEMO_MODE, EMAILS_DIR,
 )
+
 
 
 # ══════════════════════════════════════════════

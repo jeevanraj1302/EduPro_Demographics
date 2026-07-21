@@ -7,17 +7,25 @@ When connected to a real database, polls for new records instead.
 
 import random
 import string
+import sys
 from datetime import datetime
+from pathlib import Path
 from typing import Optional
 
 import numpy as np
 import pandas as pd
 from loguru import logger
 
+# ── Ensure project root is on sys.path ──
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
 from src.config import (
     STREAM_BATCH_SIZE, COUNTRIES_DISTRIBUTION, COUNTRY_REGION_MAP,
     AGE_BINS, AGE_LABELS,
 )
+
 
 
 # ══════════════════════════════════════════════
